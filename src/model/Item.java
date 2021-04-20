@@ -16,7 +16,7 @@ import java.sql.*;
 			 {e.printStackTrace();}
 			 return con;
 		}
-		
+		//comment
 		
 		public String insertItem(String code, String name, String price, String desc)
 		{
