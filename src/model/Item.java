@@ -27,7 +27,7 @@ import java.sql.*;
 				if (con == null)
 				{return "Error while connecting to the database for inserting."; }
  // create a prepared statement
-				 String query = " insert into items(`itemID`,`itemCode`,`itemName`,`itemPrice`,`itemDesc`) values (?, ?, ?, ?, ?)";
+				 String query = " insert into items(`itemID`,`itemCode`,`itemName`,`itemPrice`,`itemDesc`) values(?, ?, ?, ?, ?)";
 				 PreparedStatement preparedStmt = con.prepareStatement(query);
 				 // binding values
 				 preparedStmt.setInt(1, 0);
