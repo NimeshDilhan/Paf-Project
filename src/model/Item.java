@@ -25,9 +25,11 @@ import java.sql.*;
 			{
 				Connection con = connect();
 				if (con == null)
-				{return "Error while connecting to the database for inserting."; }
- // create a prepared statement
-				 String query = " insert into items(`itemID`,`itemCode`,`itemName`,`itemPrice`,`itemDesc`) values(?, ?, ?, ?, ?)";
+				{
+					return "Error while connecting to the database for inserting."; 
+				}
+				// create a prepared statement
+				 String query = "insert into items(`itemID`,`itemCode`,`itemName`,`itemPrice`,`itemDesc`) values(?, ?, ?, ?, ?)";
 				 PreparedStatement preparedStmt = con.prepareStatement(query);
 				 // binding values
 				 preparedStmt.setInt(1, 0);
@@ -46,6 +48,7 @@ import java.sql.*;
 			{
 				 output = "Error while inserting the item.";
 				 System.err.println(e.getMessage());
+				 System.out.println(e);
 			}
 			return output;
 		}
