@@ -1,0 +1,8 @@
+
+Apr 20, 2021 22:58:17.81 NEW SESSION
+Apr 20, 2021 22:58:17.81 [12388:12384:0420/225817.816:ERROR:process_singleton_win.cc(411)] Lock file can not be created! Error code: 32
+Apr 20, 2021 22:58:17.81 [12388:12384:0420/225817.816:ERROR:chrome_browser_main.cc(1421)] Failed to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.
+Apr 20, 2021 22:58:17.93 [12388:272:0420/225817.933:ERROR:cache_util_win.cc(21)] Unable to move the cache: 0
+Apr 20, 2021 22:58:17.93 [12388:272:0420/225817.933:ERROR:cache_util.cc(141)] Unable to move cache folder C:\Users\MISCO\AppData\Local\Google\Chrome\User Data\ShaderCache\GPUCache to C:\Users\MISCO\AppData\Local\Google\Chrome\User Data\ShaderCache\old_GPUCache_000
+Apr 20, 2021 22:58:17.93 [12388:272:0420/225817.934:ERROR:disk_cache.cc(185)] Unable to create cache
+Apr 20, 2021 22:58:17.93 [12388:272:0420/225817.934:ERROR:shader_disk_cache.cc(623)] Shader Cache Creation failed: -2
