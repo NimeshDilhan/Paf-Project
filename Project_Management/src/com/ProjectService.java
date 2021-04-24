@@ -18,7 +18,7 @@ public class ProjectService {
 	public String readProjects() {
 		return projectObj.readProject();
 	}
-// Post method 
+// Post method ADDED
 	@POST
 	@Path("/") 
 	@Consumes(MediaType.APPLICATION_FORM_URLENCODED) 
