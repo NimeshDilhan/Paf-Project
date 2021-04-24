@@ -33,6 +33,7 @@ public class ProjectService {
 		return output; 
 	}
 	
+	//Put Method
 	@PUT
 	@Path("/") 
 	@Consumes(MediaType.APPLICATION_JSON) 
@@ -49,6 +50,7 @@ public class ProjectService {
 		 return output; 
 	}
 	
+	//Delete method
 	@DELETE
 	@Path("/") 
 	@Consumes(MediaType.APPLICATION_XML) 

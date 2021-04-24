@@ -16,6 +16,7 @@ public class Project {
 		return con;
 	}
 	
+	//Values Added Insert Query Post
 	public String insertProject(String projectCode, String projectName, String projectPrice, String projectDesc) {
 		String output = "";
 		
@@ -29,7 +30,7 @@ public class Project {
 			String query = "INSERT INTO projects(`projectCode`, `projectName`, `projectPrice`, `projectDesc`) VALUES (?,?,?,?)";
 			PreparedStatement preparedStmt = con.prepareStatement(query);
 			// binding values
-//			preparedStmt.setInt(1, 0);
+     //preparedStmt.setInt(1, 0);
 			preparedStmt.setString(1, projectCode);
 			preparedStmt.setString(2, projectName);
 			preparedStmt.setString(3, projectPrice);
@@ -49,6 +50,7 @@ public class Project {
 		
 	}
 	
+	//Get Method Read Query
 	public String readProject() {
 		String output = "";
 		try {
@@ -93,6 +95,8 @@ public class Project {
 		return output;
 		
 	}
+	
+	//Update Query put
 	public String updateProject(String ID, String code, String name, String price, String desc) {
 		String output = "";
 		try {
