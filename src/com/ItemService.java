@@ -55,7 +55,7 @@ public class ItemService
 			 return output; 
 		}
 		
-
+//delete
 		@DELETE
 		@Path("/") 
 		@Consumes(MediaType.APPLICATION_XML) 
