@@ -965,3 +965,37 @@ Created Time: 2021-04-24 22:39:22.635
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2021-04-24 23:53:29.665
 !MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.egit.core 4 0 2021-04-24 23:57:01.440
+!MESSAGE An exception occurred during push on URI https://github.com/NimeshDilhan/Paf-Project.git: https://github.com/NimeshDilhan/Paf-Project.git: not authorized
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/NimeshDilhan/Paf-Project.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:570)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:466)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:160)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1367)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:191)
+	at org.eclipse.egit.ui.internal.push.ConfirmationPage$2.run(ConfirmationPage.java:211)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-04-24 23:57:34.167
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-04-24 23:57:34.169
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.egit.core 4 0 2021-04-24 23:58:18.554
+!MESSAGE An exception occurred during push on URI https://github.com/NimeshDilhan/Paf-Project.git: https://github.com/NimeshDilhan/Paf-Project.git: not authorized
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/NimeshDilhan/Paf-Project.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:570)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:466)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:160)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1367)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:191)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2021-04-24 23:58:18.557
+!MESSAGE Can't connect to any repository: https://github.com/NimeshDilhan/Paf-Project.git (https://github.com/NimeshDilhan/Paf-Project.git: not authorized)
