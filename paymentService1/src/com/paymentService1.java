@@ -45,7 +45,7 @@ public class paymentService1
 		@Produces(MediaType.TEXT_PLAIN) 
 		public String updatePaymentInfo(String paymentData) 
 		{ 
-			//Convert the input string to a JSON object 
+			
 			 JsonObject paymentObject = new JsonParser().parse(paymentData).getAsJsonObject(); 
 			//Read the values from the JSON object
 			 String paymentID = paymentObject.get("PaymentID").getAsString(); 
@@ -68,7 +68,7 @@ public class paymentService1
 			//Convert the input string to an XML document
 			 Document doc = Jsoup.parse(paymentData, "", Parser.xmlParser()); 
 			 
-			//Read the value from the element <itemID>
+	
 			 String PaymentID = doc.select("PaymentID").text(); 
 			 String output = paymentObj.deletePaymentInfo(PaymentID);
 			 return output; 
