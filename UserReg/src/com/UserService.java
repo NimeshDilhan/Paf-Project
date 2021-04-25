@@ -143,5 +143,45 @@ Connection con = null;
 	 }
 	 return output;
 	 }
+	
+	public String login(User user) {
+		String output = " ";
+		
+		
+		try {
+			Connection con = DBconnection.connecter();
+			
+			if (con == null) {
+				return "Error while connecting to the database for updating.";
+			}
+			//String query = "SELECT * FROM user WHERE id=? and password=?";
+			
+			String query = "SELECT * FROM user WHERE id="+user.getUserid()+ " and password='"+user.getPassword()+"'";
+			
+			System.out.println(query);
+			
+			Statement stmt = con.createStatement();
+			ResultSet results = stmt.executeQuery(query);
+			
+			if (!results.isBeforeFirst() ) {    
+			    System.out.println("Invalid User Credentials"); 
+			    
+			    output = "Invalid User Credentials !!!!";
+			}
+			// iterate through the rows in the result set
+			while (results.next()) {
+				
+				output = "Valid User, Welcome "+results.getString("first_name")+" "+results.getString("last_name")+", User Role: "+results.getString("user_role");				   
+			}
+
+			
+		} catch (Exception e) {
+			output = "Error while reading the User.";
+			System.err.println(e.getMessage());
+		}
+		return output;
+	}
+
+	
 
 }

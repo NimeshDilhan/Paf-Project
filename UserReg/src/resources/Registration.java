@@ -13,6 +13,7 @@ import javax.ws.rs.core.MediaType;
 import model.*;
 import com.*;
 
+import javax.annotation.security.RolesAllowed;
 //For REST Service
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -112,4 +113,24 @@ public class Registration {
 			String output = UserObject2.deleteUsers(UserObj);
 			return output;
 		}
+		
+
+		@RolesAllowed({"admin","registercustomer\\\\\\\",\\\\\\\"registerresearch\\\\\\\",\\\\\\\"fundingbodies"})
+		@GET
+		@Path("/login")
+		@Consumes(MediaType.APPLICATION_JSON)
+		@Produces(MediaType.TEXT_HTML)
+		public String viewUserShedual(String userData) {
+			
+			JsonObject UserJsonObj = new JsonParser().parse(userData).getAsJsonObject();
+			String id = UserJsonObj.get("userid").getAsString();
+			String password = UserJsonObj.get("password").getAsString();
+			
+			UserService userobject3 = new UserService();
+			UserObj.setUserid(id);
+			UserObj.setPassword(password);
+			String output = userobject3.login(UserObj);
+			return output;
+		}
+
 }
