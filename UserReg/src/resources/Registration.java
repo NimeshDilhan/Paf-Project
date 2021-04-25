@@ -114,7 +114,8 @@ public class Registration {
 			return output;
 		}
 		
-
+		//loging Service
+		
 		@RolesAllowed({"admin","registercustomer\\\\\\\",\\\\\\\"registerresearch\\\\\\\",\\\\\\\"fundingbodies"})
 		@GET
 		@Path("/login")
