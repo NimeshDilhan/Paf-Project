@@ -21,7 +21,7 @@ public class paymentService1
 			return paymentObj.readPayments();
 		 }
 		
-		
+		//Insert Service
 		@POST
 		@Path("/") 
 		@Consumes(MediaType.APPLICATION_FORM_URLENCODED) 
@@ -38,7 +38,7 @@ public class paymentService1
 			return output; 
 		}
 		
-		
+		//Update Service
 		@PUT
 		@Path("/") 
 		@Consumes(MediaType.APPLICATION_JSON) 
@@ -58,7 +58,7 @@ public class paymentService1
 			 String output = paymentObj.updatePaymentInfo(paymentID, paymentcode, paymentType, totalprice, paymentStatus, date, time);
 			 return output; 
 		}
-
+		//delete service
 		@DELETE
 		@Path("/") 
 		@Consumes(MediaType.APPLICATION_XML) 
