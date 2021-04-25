@@ -112,7 +112,7 @@ public class Funding_Posts {
 	}
 	
 	
-	public String updatePost(String fund_ID,String fundMan_Name, String Email,String Contact,String fundman_ID) 
+	public String updatePost(String fund_ID,String fundMan_Name, String Email,String Contact,String fundman_ID,String ui) 
 	 { 
 	 String output = ""; 
 	 try
