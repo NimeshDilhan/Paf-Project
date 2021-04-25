@@ -12,7 +12,7 @@ Connection con = null;
 		con = DBconnection.connecter();
 	}
 	
-	 //A common method to connect to the DB
+	
 	
 	
 	public String insertUsers(User User)
