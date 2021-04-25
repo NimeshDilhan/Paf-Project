@@ -47,7 +47,7 @@ public class paymentService1
 		{ 
 			
 			 JsonObject paymentObject = new JsonParser().parse(paymentData).getAsJsonObject(); 
-			//Read the values from the JSON object
+		
 			 String paymentID = paymentObject.get("PaymentID").getAsString(); 
 			 String paymentcode = paymentObject.get("PaymentCode").getAsString(); 
 			 String paymentType = paymentObject.get("PaymentType").getAsString(); 
