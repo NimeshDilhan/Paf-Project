@@ -2,7 +2,7 @@ package com;
 import java.sql.*;
 import util.DBconnection;
 import model.*;
-//import com.GB.Users.util.*;
+
 
 public class UserService {
 Connection con = null;
